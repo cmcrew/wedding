@@ -15,7 +15,7 @@ body {
     font-family: 'Gentium Basic', serif;
     font-size: 1.5em;
     color: #666;
-    /*text-align: center;*/
+    text-align: center;
 }
 .caps {
     text-transform: uppercase;
@@ -239,12 +239,14 @@ section#heelsoverhead p {
 }
 #crowd {
     position: relative;
+    float: right;
     width: 70%;
-    margin-left: 30%;
-    margin-top: 80px;
-    
+    margin-right: 5%;
+    margin-top: 80px;   
 }
-
+#crowd img {
+    width: 100%;
+}
 /******************************************************
 
 We Made This Website Section
@@ -252,7 +254,23 @@ We Made This Website Section
  ******************************************************/
 
 section#website {
-    
+    /*height: 1000px;   */
+}
+
+.textblock5 {
+    position: relative;
+    z-index: 10;
+    margin: 0 auto;
+    width: 50%;
+    padding: 20px;
+    /*background: url(../images/Large-Cloud.png) no-repeat;*/
+    /*background-size: 100% 100%;*/
+    /*background-origin: border-box;*/
+}
+
+section#website p {
+    font-size: 1.5em;
+    line-height: 1.5em;
 }
 
 /******************************************************
@@ -262,8 +280,23 @@ Map Section
  ******************************************************/
 
 section#map {
-    height: 1600px
-    
+    /*height: 1600px   */
+}
+
+.textblock6 {
+    position: relative;
+    z-index: 10;
+    margin: 0 auto;
+    width: 50%;
+    padding: 20px;
+    /*background: url(../images/Large-Cloud.png) no-repeat;*/
+    /*background-size: 100% 100%;*/
+    /*background-origin: border-box;*/
+}
+
+section#map p {
+    font-size: 1.5em;
+    line-height: 1.5em;
 }
 
 /******************************************************
@@ -273,8 +306,23 @@ Cherry Hill - No Spills Section
  ******************************************************/
 
 section#cherryhill {
-    height: 1600px
+    /*height: 1600px*/
     
+}
+.textblock7 {
+    position: relative;
+    z-index: 10;
+    margin: 0 auto;
+    width: 50%;
+    padding: 20px;
+    /*background: url(../images/Large-Cloud.png) no-repeat;*/
+    /*background-size: 100% 100%;*/
+    /*background-origin: border-box;*/
+}
+
+section#cherryhill p {
+    font-size: 1.5em;
+    line-height: 1.5em;
 }
 
 /******************************************************
@@ -294,7 +342,7 @@ Casa Pomona Section
  ******************************************************/
 
 section#casapomona {
-    height: 1600px
+    /*height: 1600px*/
     
 }
 
@@ -305,6 +353,7 @@ House Party Section
  ******************************************************/
 
 section#houseparty {
+    /*height: 500pxl*/
     
 }
 
@@ -315,6 +364,7 @@ Cocktails and Eats Section
  ******************************************************/
 
 section#cocktailsandeats {
+    /*height: 500px;*/
     
 }
 
@@ -325,7 +375,7 @@ No Registry Section
  ******************************************************/
 
 section#noregistry {
-    height: 1600px
+    /*height: 500px*/
     
 }
 
@@ -336,7 +386,7 @@ Click the Link Section
  ******************************************************/
 
 section#clicklink {
-    height: 1600px
+    /*height: 500px*/
     
 }
 
