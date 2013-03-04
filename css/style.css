@@ -11,7 +11,7 @@ General Styling
 
 body {
     width:100%;
-    background: #fff;
+    background: url(../images/noise.png) #fff;
     font-family: 'Gentium Basic', serif;
     font-size: 1.5em;
     color: #666;
@@ -136,9 +136,8 @@ Intro Section
  ******************************************************/
 
 section#intro {
-    width: 100%;
-    height: 1000px;
-    text-align: center;
+    /*min-height: 800px;*/
+    margin-bottom: 200px;
 }
 #tree1 {
     position: absolute;
@@ -178,7 +177,8 @@ Date Section
  ******************************************************/
 
 section#date {
-    height: 1000px
+    /*min-height: 800px;*/
+    margin-bottom: 100px;
     
 }
 .textblock3 {
@@ -190,11 +190,18 @@ section#date {
     background-origin: content-box;
 }
 
-section#date p {
+.textblock3 p {
     text-align: center;
     padding: 25px 0 50px 0;
-    font-size: 1.5em;
+    font-size: 1.4em;
     line-height: 1.5em;
+}
+p.thedate {
+    font-family: helvetica, arial, sans-serif;
+    font-weight: 800;
+    font-size: 8.0em;
+    text-transform: uppercase;
+    margin: 20px 0;
 }
 .countdown {
     position: relative;
@@ -231,7 +238,8 @@ Heels over Head Section
  ******************************************************/
 
 section#heelsoverhead {
-    height: 1200px;    
+    /*min-height: 800px;    */
+    margin-bottom: 100px;
 }
 .textblock4 {
     position: relative;
@@ -239,7 +247,7 @@ section#heelsoverhead {
     margin: 0 auto;
     width: 50%;
     padding: 20px;
-    background: url(../images/Large-Cloud.png) no-repeat;
+    background: url(../images/center-cloud.png) no-repeat;
     background-size: 100% 100%;
     background-origin: border-box;
 }
@@ -252,25 +260,29 @@ section#heelsoverhead {
 #cloud-left {
     position: absolute;
     float: left;
-    left: 5%;
+    left: 7%;
+    margin-top: -50px;
     /*z-index: 1;*/
 }
 #cloud-right {
     position: absolute;
-    right: 5%;
     float: right;
+    right: 7%;
     /*z-index: -1;*/
 }
 #crowd {
     position: relative;
     z-index: 100;
-    float: right;
-    width: 70%;
+    width: 100%;
     margin-right: 5%;
-    margin-top: 80px;   
+    margin-top: 80px;
+    border-bottom: 1px solid #5F5244;
+    box-shadow: 0 10px 15px #5F5244;
 }
 #crowd img {
-    width: 100%;
+    position: relative;
+    margin-bottom: -10px;
+    width: 70%;
 }
 /******************************************************
 
@@ -500,6 +512,9 @@ Media Queries
     }
     #cloud-left, #cloud-right {
         display: none;
+    }
+    p.thedate {
+        font-size: 4.0em;
     }
     footer p.right {
         float: left;
