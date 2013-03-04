@@ -205,6 +205,7 @@ section#date p {
 }
 hr {
     position: relative;
+    display: block;
     z-index: 1;
     float: left;
     height: 2px;
@@ -215,7 +216,8 @@ hr {
 }
 #bird {
     position: relative;
-    z-index: 10;
+    float: left;
+    /*z-index: 10;*/
     float: right;
     margin-right: 11%;
     top: 20px;
@@ -233,7 +235,7 @@ section#heelsoverhead {
 }
 .textblock4 {
     position: relative;
-    z-index: 100;
+    /*z-index: 100;*/
     margin: 0 auto;
     width: 50%;
     padding: 20px;
@@ -241,27 +243,23 @@ section#heelsoverhead {
     background-size: 100% 100%;
     background-origin: border-box;
 }
-section#heelsoverhead p {
-    position: relative;
-    z-index: 1000;
+.textblock4 p {
     text-align: center;
     padding: 100px 0 80px;
     font-size: 1.2em;
     line-height: 1.5em;
 }
 #cloud-left {
-    position: relative;
+    position: absolute;
     float: left;
-    /*top: -500px;*/
-    margin-left: 5%;
-    z-index: 1;
+    left: 5%;
+    /*z-index: 1;*/
 }
 #cloud-right {
-    position: relative;
-    margin-right: 5%;
-    /*top: -500px;*/
+    position: absolute;
+    right: 5%;
     float: right;
-    z-index: -1;
+    /*z-index: -1;*/
 }
 #crowd {
     position: relative;
@@ -289,14 +287,15 @@ section#website {
     z-index: 10;
     float: right;
     margin-right: 10%;
-    width: 30%;
-    padding: 40px 20px;
+    width: 35%;
+    padding: 20px;
     background: url(../images/purplecloud.png) no-repeat;
     background-size: 100% 100%;
     background-origin: border-box;
 }
 
-section#website p {
+.textblock5 p {
+    padding: 40px 20px;
     /*top: 50px;*/
     font-size: 1.0em;
     line-height: 1.5em;
@@ -425,19 +424,30 @@ Footer
 
  ******************************************************/
 footer {
-    font-size: .7em;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #fff;
+    font-size: .6em;
     font-weight: 200;
-    background: #9C8E68;
-    border-bottom: 15px solid #65B790;
+    background: #7ad6e9;
     margin: 0;
+    padding: 70px 0 10px 0;
+}
+.seal {
+    background: #22AECA;
+    height: 30px;
+}
+.seal img {
+    position: relative;
+    margin-top: -30px;
 }
 footer p {
-    float: left;
-    padding: 0 20px;
+    text-align: center;
+    padding: 0;
 }
-footer p.right {
-    float: right;
+footer a {
+    color: #fff;
 }
+
 /******************************************************
 
 Clearfix
@@ -491,6 +501,9 @@ Media Queries
     #cloud-left, #cloud-right {
         display: none;
     }
+    footer p.right {
+        float: left;
+    }
 }
 
 @media only screen and (min-width: 461px) and (max-width: 824px) {
@@ -505,7 +518,10 @@ Media Queries
     }
     .textblock5 {
         width: 50%;
+        font-size: .9em;
     }
-
+    footer p.right {
+        float: right;
+    }
 
 }
