@@ -141,7 +141,7 @@ section#intro {
 }
 #tree1 {
     position: absolute;
-    z-index: 1;
+    z-index: 1000;
     right: 0;
     top: 0;
     width: 100%;
@@ -208,7 +208,7 @@ p.thedate {
     text-align: center;
 }
 .countdown p {
-    font-size: 3.0em;
+    font-size: 2.0em;
 }
 hr {
     position: relative;
@@ -455,9 +455,11 @@ footer {
 footer p {
     text-align: center;
     padding: 0;
+    font-weight: 200;
 }
 footer a {
     color: #fff;
+    font-weight: 600;
 }
 
 /******************************************************
