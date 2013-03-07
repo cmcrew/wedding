@@ -159,7 +159,7 @@ section#intro {
 .textblock1 p {
     width: 65%;
     margin: 0 auto;
-    background: #fff;
+    background: url(../images/noise.png) #fff;
 }
 .textblock2 {
     position: relative;
@@ -529,6 +529,9 @@ Media Queries
     }
     .textblock1, .textblock3, .textblock4 {
         width: 70%;
+    }
+    .textblock1 {
+        font-size: 1em;
     }
     .textblock4 {
         /*font-size: .7em;*/

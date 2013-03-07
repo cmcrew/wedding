@@ -1,0 +1,140 @@
+body {
+  background: #666;
+  color: #2f1703;
+  color: #666;
+  font-family: 'OFL Sorts Mill Goudy TT',Garamond,Georgia,'Times New Roman',serif;
+  margin: 0 20px;
+  padding: 0;
+}
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, div, td, label {
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+input, select, textarea {
+  font-family: Tahoma,Arial,serif;
+  font-size: 13px;
+}
+div.ss-form-container {
+  background: #fffefa;
+  border: 1px solid #d4c7b4;
+  font-size: 1.2em;
+  line-height: 1.6em;
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 20px 40px 20px 20px;
+  width: auto;
+}
+div.ss-form-heading {
+  text-align: center;
+}
+.ss-required-asterisk {
+  color: #c00;
+}
+h1, h2 {
+  font-family: Tangerine;
+}
+h1.ss-form-title {
+  background: url('https://ssl.gstatic.com/docs/forms/themes/images/v0/0AX42CRMsmRFbUy0yMjdiMTQ4Yi0zZjUwLTQ5NTUtOGVmNC05ODNlZTUxYTViYzA/entry-bg.gif') bottom center no-repeat;
+  font-size: 48px;
+  font-weight: normal;
+  line-height: 52px;
+  margin: 0 0 10px;
+  padding: 0 0 25px;
+}
+div.errorbox-bad {
+  background: none;
+  border: none;
+  padding: 0;
+}
+div.errorheader, div.errorbox-bad div.ss-form-entry {
+  background: #fee;
+  border: 1px solid #ebb;
+  color: #c00;
+  padding: 5px;
+}
+div.ss-form-entry {
+  margin: 0 0 20px;
+}
+div.ss-section-header div.ss-form-entry, div.ss-navigate div.ss-form-entry {
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+div.ss-section-header, div.ss-page-break {
+  background: url('//ssl.gstatic.com/docs/forms/images/v0/0AX42CRMsmRFbUy0yMjdiMTQ4Yi0zZjUwLTQ5NTUtOGVmNC05ODNlZTUxYTViYzA/entry-bg.gif') bottom center no-repeat;
+  margin: 10px 0;
+  padding: 0 0 25px;
+  text-align: center;
+}
+h2.ss-section-title, h2.ss-page-title {
+  background: none;
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 42px;
+  margin: 0;
+  padding: 0;
+}
+.ss-choice-item {
+  text-transform: uppercase;
+}
+label.ss-q-help {
+  font-style: italic;
+  margin: 0;
+}
+.ss-required-asterisk {
+  color: #999;
+}
+input.ss-q-short, textarea.ss-q-long, select, input.ss-q-other, input.ss-q-checkbox {
+  border: 1px solid #ddd0cc;
+}
+label.ss-scalenumber {
+  padding: 0;
+}
+td.ss-scalenumbers, td.ss-scalerow, td.ss-gridnumbers, td.ss-gridrow {
+  border-color: #ddd0cc;
+}
+tr.ss-grid-row-odd {
+  background: url('//ssl.gstatic.com/docs/forms/themes/images/v0/0AX42CRMsmRFbUy0yMjdiMTQ4Yi0zZjUwLTQ5NTUtOGVmNC05ODNlZTUxYTViYzA/paperalt.jpg');
+}
+tr.ss-grid-row-even {
+  background: none;
+}
+
+/********************Media Query**************************/
+@media only screen and (max-device-width: 600px) {
+  .ss-form-container{
+    width:90%;
+    margin:0 auto;
+  }
+  body{
+    padding:1em 0;
+  }
+  .ss-edit-link{
+    display:none;
+  }
+  input[type="text"],input:not([type]){
+    width:90%;
+  }
+  .ss-terms{
+    display:block;
+    margin-left:0em;
+    text-align:left;
+  }
+  .ss-form,.ss-form-heading,.ss-footer{
+    padding:0.5em;
+  }
+  h1.ss-form-title{
+    margin-top:0;
+  }
+  pre{
+    width:90%;
+    overflow-x:hidden;
+  }
+  .ss-q-long{
+    width:90%;
+  }
+}
