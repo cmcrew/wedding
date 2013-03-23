@@ -9,9 +9,9 @@
     <meta name="keywords" content="Courtney and Kim, Courtney Mitchell, Kimberly Krolewski, Wedding, NYC Wedding, Central Park Wedding, July 6, 2013, Casa Pomona, DIY Wedding Invitation" />
     
     <link href='http://fonts.googleapis.com/css?family=Gentium+Basic:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Cabin|Cabin+Condensed|Lobster' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
     <!--<script type="text/javascript" src="scroll.js"></script>-->
     <!--<script type="text/javascript" src="jquery.tipTip.js"></script>-->
     
@@ -20,8 +20,9 @@
     	
     <div id="wrapper">
             
-        <section id="intro">
-	    <img id="tree1" src="images/tree1363_shortline.png" alt=""/>
+        <section id="section1">
+	    <img class="clouds" id="cloud1" src="images/newimages/cloud1.png" alt="">
+	    <img class="clouds" id="cloud2" src="images/newimages/cloud2.png" alt="">
 	    <div class="sign"></div>
 	    <div class="circles">
 		<div class="fullcircle"></div>
@@ -30,22 +31,24 @@
 
 	    <header>
 		<div class="signgradient-bg">
-		    <h1><span class="caps">Courtney</span> and <span class="caps">Kim</span></h1>
-		    <p>are so excited</p>
+		    <h1>Courtney <span>and</span> Kimberly</h1>		    
 		</div>
 	    </header>	    
 
+	    <div class="weddingdate">
+		<p>Saturday, July 06, 2013</p>
+	    </div>
+	    <div class="lovebirds1">
+		<img id="birds1" src="images/newimages/birds1.png" alt="">
+	    </div>
 	    <div class="textblock1">
+		<p>Courtney and Kim</p>
+		<p>Are so excited</p>
 		<p>To announce that you</p>
 	    </div>
 	    <div class="textblock2">
-		<p class="lc big">Are cordially invited</p>
+		<p class="big">Are Cordially Invited</p>
 	    </div>
-	    <img id="scroll" src="images/scroll-down-arrow.png" alt="" />
-	    <p class="blue">Scroll Down</p>
-        </section>
-        
-        <section id="date">
 	    <div class="textblock3">
 		<p>To something so great<br/>
 		We can hardly wait.<br/>
@@ -54,10 +57,9 @@
 	    </div>
 	    <p class="thedate">6July</p>
 	    <div class="countdown">
-		<!--<p>200 Days. 14 Hours. 10 Min. 42 Sec.</p>-->
 		<p><script language="JavaScript">
 		    TargetDate = "07/06/2013 9:00 AM UTC-0500";
-		    BackColor = "rgba(255,255,255,0)";
+		    BackColor = "#fff";
 		    ForeColor = "#666";
 		    CountActive = true;
 		    CountStepper = -1;
@@ -66,94 +68,69 @@
 		    FinishMessage = "It is finally here!";
 		</script>
 	        <script language="JavaScript" src="js/countdown.js"></script></p>
-
 	    </div>
-	    <img id="bird" src="images/green-birdie.png" alt="">
-	    <hr>
 	    <div class="clear"></div>
-        </section>
-        
-        <section id="heelsoverhead">
-	    <img id="cloud-left" src="images/cloud-left.png" alt="">
-	    <img id="cloud-right" src="images/cloud-right.png" alt="">
 	    <div class="textblock4">
-		<p>We're heels over head<br/>
-		That we're going to be wed<br/>
+		<p>We're heels over head</p>
+	    </div>
+	    <div class="yogagirl">
+		<img id="yogagirl" src="images/newimages/yoga1.png" alt="">
+	    </div>
+	    <div class="textblock4_1">
+		<p>That we're going to wed<br/>
 		In the presence of you<br/>
 		Our most special crew</p>
 	    </div>
-	    <!--Why do these have to be after the text in markup in order to not affect the text layout?-->
-
-	    <div id="crowd">
-		<img src="images/crowd2.png" alt="">
-	    </div>
-	    <!--<hr>-->
+	    <div id="crowd"></div>
         </section>
-     <!--   
-        <section id="website">
+       
+        <section id="section2">
 	    <div class="textblock5">
 		<p>We made this website<br/>
 		We did, yeah that's right!<br/>
 		To share the agenda<br/>
 		For our day of splenda'</p>
 	    </div>
-        </section>
-        
-        <section id="map">
 	    <div class="textblock6">
-		<p>Here here, see this mark<br/>
+		<p>This <a href="#">map</a> shows a mark<br/>
 		Within Central Park?<br/>
 		That's the special spot<br/>
 		Where we'll tie the knot!</p>
 	    </div>
-        </section>
-        
-        <section id="cherryhill">
 	    <div class="textblock7">
-		<p>It's called Cherry Hill<br/>
-		And we don't want a spill,<br/>
-		So we beg you to choose<br/>
-		Your most sensible shoes!</p>
+		<p>We beg you to choose<br/>
+		Your most sensible shoes<br/>
+		It's called <a href="#">Cherry Hill</a><br/>
+		And we don't want a spill.</p>
+		</p>
 	    </div>
-        </section>
-        
-        <section id="vows">
 	    <div class="textblock8">
 		<p>We'll start the day right<br/>
 		In the bright morning light<br/>
-		By exchanging our vows<br/>
-		(We expect lots of wows!)</p>
+		We'll exchange our vows<br/>
+		And expect lots of wows!</p>
 	    </div>
         </section>
         
-        <section id="casapomona">
+        <section id="section3">
 	    <div class="textblock9">
 		<p>Next we will munch<br/>
 		On delicious brunch.<br/>
 		Food from Barcelona,<br/>
 		Served at Casa Pomona!</p>
 	    </div>
-        </section>
-        
-        <section id="houseparty">
 	    <div class="textblock10">
 		<p>The day won't end there<br/>
 		Party poopers beware.<br/>
 		We'll be pouring the Cava<br/>
 		At our very own Casa!</p>
 	    </div>
-        </section>
-        
-        <section id="cocktailsandeats">
 	    <div class="textblock11">
 		<p>Cocktails and eats<br/>
 		Will be our little treats<br/>
 		For our family and friends<br/>
 		The fun just extends!</p>
 	    </div>
-        </section>
-        
-        <section id="noregistry">
 	    <div class="textblock12">
 		<p>Registries there are none<br/>
 		Not any, not one.<br/>
@@ -161,7 +138,7 @@
 		Will bring us great pleasance!</p>
 	    </div>
         </section>
-        
+	
         <section id="clicklink">
 	    <div class="textblock13">
 		<p>So please click the link<br/>
@@ -170,16 +147,12 @@
 		And say you'll be here!</p>
 	    </div>
         </section>
-        -->
     </div><!-- wrapper -->
-    <div class="seal">
-	    <img src="images/seal-img.png" alt=""/>
-    </div>
     <footer>
 	<p>Kim & Courtney's NYC Wedding &middot; July 6, 2013 &middot; Design by <a href="http://uxmojo.com">Kim Krolewski</a> and <a href="http://courtney-mitchell.com">Courtney Mitchell</a></p>
 	<div class="clear"></div>
     </footer>
-    
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 </body>
 
 </html>

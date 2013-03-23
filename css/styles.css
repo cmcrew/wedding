@@ -8,16 +8,19 @@
 General Styling
 
  ******************************************************/
-
 body {
     width:100%;
     /*background: url(../images/noise.png) #fff;*/
     background: #fff;
-    font-family: helvetica, arial, sans-serif;
-    font-size: 1.5em;
+    font-family: 'Cabin', sans-serif;
+    /*font-family: 'Cabin Condensed', sans-serif;*/
+    font-size: 2.0em;
     font-weight: 200;
     color: #4B4F4E;
     text-align: center;
+}
+section {
+    margin-bottom: 100px;
 }
 p {
     margin: 0;
@@ -32,20 +35,14 @@ p {
     font-size: 1.9em;
     font-weight: 600;
 }
-h1 {
-    font-size: 2.5em;
-    font-weight: 800;
-    line-height: 1.5em;
-    margin: 0;
-}
 #wrapper {
-    /*position: relative;*/
     margin: 0 auto;
 }
 a {
     text-decoration: none;
     color: #333;
 }
+
 /******************************************************
 
 Header
@@ -89,10 +86,21 @@ header {
 }
 
 header h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 2.5em;
+    font-weight: 800;
+    line-height: 1.5em;
+    margin: 0;
     padding-top: 5px;
+    color: #006077;
+     /*-webkit-text-stroke: 4px #006077;*/
+}
+header h1 span {
+    font-family: 'Cabin', sans-serif;
+    font-size: 0.5em;
+    font-weight: 200;
     color: #fff;
-     -webkit-text-stroke: 4px #006077;
-
+    vertical-align: middle;
 }
 header p {
     padding-bottom: 5px;
@@ -129,33 +137,6 @@ header p {
     float: right;
     margin-top: -10px;
 }
-/******************************************************
-
-Sections
-
- ******************************************************/
-section {
-    /*width:100%;*/
-}
-
-/******************************************************
-
-Intro Section
-
- ******************************************************/
-
-section#intro {
-    /*min-height: 800px;*/
-    margin-bottom: 200px;
-}
-#tree1 {
-    position: absolute;
-    z-index: 1000;
-    right: 0;
-    top: 0;
-    width: 100%;
-    float: right;
-}
 .clouds {
     position: absolute;
     z-index: 1;
@@ -180,8 +161,15 @@ section#intro {
 .weddingdate p {
     width: 65%;
     margin: 0 auto;
-    background: url(../images/noise.png) #fff;
+    background: #fff;
 }
+/******************************************************
+
+Section 1 (white section)
+
+ ******************************************************/
+
+/* ----------- text -------------*/
 .textblock1 {
     line-height: 1.5em;
 }
@@ -192,29 +180,10 @@ section#intro {
     width: 20%;
     margin-bottom: 20px;
 }
-
-img#scroll {
-    position: relative;
-    margin: 0 auto;
-}
-/******************************************************
-
-Date Section
-
- ******************************************************/
-
-section#date {
-    /*min-height: 800px;*/
-    margin-bottom: 100px;
-    
-}
 .textblock3 {
     position: relative;
     margin: 0 auto;
     width: 40%;
-    /*background: url(../images/green-twig-frame.png) no-repeat;*/
-    /*background-size: 100% 100%;*/
-    /*background-origin: content-box;*/
 }
 
 .textblock3 p {
@@ -239,37 +208,6 @@ p.thedate {
 .countdown p {
     font-size: 1.8em;
 }
-hr {
-    position: relative;
-    display: block;
-    z-index: 1;
-    float: left;
-    height: 2px;
-    border: none;
-    background: #625443;
-    width: 85%;
-    
-}
-#bird {
-    position: relative;
-    float: left;
-    /*z-index: 10;*/
-    float: right;
-    margin-right: 11%;
-    top: 20px;
-    
-}
-
-/******************************************************
-
-Heels over Head Section
-
- ******************************************************/
-
-section#heelsoverhead {
-    /*min-height: 800px;    */
-    /*margin-bottom: 100px;*/
-}
 .textblock4, .textblock4_1 {
     position: relative;
     /*z-index: 100;*/
@@ -282,159 +220,38 @@ section#heelsoverhead {
     padding: 100px 0 80px;
     line-height: 1.5em;
 }
-#cloud-left {
-    position: absolute;
-    float: left;
-    left: 7%;
-    margin-top: -50px;
-    /*z-index: 1;*/
-}
-#cloud-right {
-    position: absolute;
-    float: right;
-    right: 7%;
-    /*z-index: -1;*/
-}
-#crowd {
-    position: relative;
-    z-index: 100;
-    width: 100%;
-    height: 530px;
-    background: url(../images/newimages/crowd.png);
-    margin-right: 5%;
-    margin-top: 80px;
-}
-#crowd img {
-    position: relative;
-    /*margin-bottom: -10px;*/
-}
-/******************************************************
 
-We Made This Website Section
+/* ----------- images -------------*/
 
- ******************************************************/
 
-section#website {
-    background: #38ADCA;
-    height: 1000px;   
-}
-
-.textblock5, .textblock6, .textblock7, .textblock8 {
-    position: relative;
-    z-index: 10;
-    float: left;
-    margin-left: 10%;
-    width: 35%;
-    padding: 20px;
-}
-
-.textblock5 p, .textblock6 p, .textblock7 p, .textblock8 p {
-    text-align: left;
-    padding: 40px 20px;
-    color: #fff;
-    line-height: 1.5em;
-}
 
 /******************************************************
 
-Map Section
+Section 2 (blue section)
 
  ******************************************************/
 
-section#map {
-    background: #38ADCA;
-    min-height: 600px   
-}
+/* ----------- text -------------*/
 
-.textblock6 a {
-    color: #C73D29;
-}
+
+/* ----------- images -------------*/
 
 /******************************************************
 
-Cherry Hill - No Spills Section
+Section 3 (white section)
 
  ******************************************************/
 
-section#cherryhill {
-    background: #38ADCA;
-    min-height: 600px;   
-}
+/* ----------- text -------------*/
 
-.textblock7 a {
-    color: #C73D29;
-}
+
+/* ----------- images -------------*/
 
 /******************************************************
 
-Exchange our Vows Section
+RSVP Envelope
 
  ******************************************************/
-
-section#vows {
-    background: #38ADCA;
-    min-height: 600px;
-}
-
-/******************************************************
-
-Casa Pomona Section
-
- ******************************************************/
-
-section#casapomona {
-    /*background: #38ADCA;*/
-    /*height: 1600px*/
-    
-}
-
-/******************************************************
-
-House Party Section
-
- ******************************************************/
-
-section#houseparty {
-    /*background: #38ADCA;*/
-    /*height: 500pxl*/
-    
-}
-
-/******************************************************
-
-Cocktails and Eats Section
-
- ******************************************************/
-
-section#cocktailsandeats {
-    /*background: #38ADCA;*/
-    /*height: 500px;*/
-    
-}
-
-/******************************************************
-
-No Registry Section
-
- ******************************************************/
-
-section#noregistry {
-    /*background: #38ADCA;*/
-    /*height: 500px*/
-    
-}
-
-/******************************************************
-
-Click the Link Section
-
- ******************************************************/
-
-section#clicklink {
-    /*background: #38ADCA;*/
-    /*height: 500px*/
-    
-}
 
 /******************************************************
 
@@ -449,14 +266,6 @@ footer {
     background: #7ad6e9;
     margin: 0;
     padding: 70px 0 10px 0;
-}
-.seal {
-    background: #22AECA;
-    height: 30px;
-}
-.seal img {
-    position: relative;
-    margin-top: -30px;
 }
 footer p {
     text-align: center;
@@ -514,12 +323,6 @@ Media Queries
     }
     .textblock2 p {
         font-size: 1.5em;
-    }
-    #tree1 {
-        display: none;
-    }
-    #cloud-left, #cloud-right {
-        display: none;
     }
     p.thedate {
         font-size: 4.0em;
