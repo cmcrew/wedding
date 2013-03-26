@@ -10,20 +10,24 @@ General Styling
  ******************************************************/
 body {
     width:100%;
-    /*background: url(../images/noise.png) #fff;*/
     background: #fff;
     font-family: 'Cabin', sans-serif;
-    /*font-family: 'Cabin Condensed', sans-serif;*/
     font-size: 2.0em;
     font-weight: 200;
     color: #4B4F4E;
     text-align: center;
+    
+    /*background: url(../images/noise.png) #fff;*/    
+    /*font-family: 'Cabin Condensed', sans-serif;*/
 }
-section {
-    margin-bottom: 100px;
+.textblock {
+    position: relative;
+    z-index: 1000;
 }
 p {
     margin: 0;
+    margin-bottom: 50px;
+    line-height: 1.4em;
 }
 .caps {
     text-transform: uppercase;
@@ -40,7 +44,6 @@ p {
 }
 a {
     text-decoration: none;
-    color: #333;
 }
 
 /******************************************************
@@ -93,7 +96,6 @@ header h1 {
     margin: 0;
     padding-top: 5px;
     color: #006077;
-     /*-webkit-text-stroke: 4px #006077;*/
 }
 header h1 span {
     font-family: 'Cabin', sans-serif;
@@ -137,29 +139,20 @@ header p {
     float: right;
     margin-top: -10px;
 }
-.clouds {
-    position: absolute;
-    z-index: 1;
-}
-#cloud1 {
-    float: left;
-}
-#cloud2 {
-    right: 0;
-    top: 200px;
-}
 .weddingdate {
-    width: 45%;
     position: relative;
-    height: 30px;
     z-index: 10;
     margin: 0 auto;
     margin-bottom: 50px;
-    background: url(../images/arrows.png) no-repeat;
-    background-size: 100%
+    width: 55%;
+    background: url(../images/newimages/arrows.png) no-repeat;
+    background-size: 100%;
+    /*background-position: 0 25px;*/
 }
 .weddingdate p {
-    width: 65%;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    width: 55%;
     margin: 0 auto;
     background: #fff;
 }
@@ -170,82 +163,287 @@ Section 1 (white section)
  ******************************************************/
 
 /* ----------- text -------------*/
-.textblock1 {
-    line-height: 1.5em;
-}
-.textblock2 {
-    position: relative;
+.textblock p.big {
     margin: 0 auto;
     margin-top: 50px;
-    width: 20%;
     margin-bottom: 20px;
 }
-.textblock3 {
-    position: relative;
-    margin: 0 auto;
-    width: 40%;
-}
 
-.textblock3 p {
-    text-align: center;
-    padding: 25px 0 50px 0;
-    line-height: 1.5em;
-}
 p.thedate {
+    position: relative;
+    z-index: 1000;
     font-family: helvetica, arial, sans-serif;
     font-weight: 800;
-    font-size: 7.0em;
+    font-size: 6.0em;
     text-transform: uppercase;
     margin: 20px 0;
-    color: #fff;
-    -webkit-text-stroke: 10px #3AADC9;
-
+    color: #65B6CC;
 }
 .countdown {
     position: relative;
+    z-index: 1000;
     text-align: center;
 }
 .countdown p {
     font-size: 1.8em;
 }
-.textblock4, .textblock4_1 {
-    position: relative;
-    /*z-index: 100;*/
-    margin: 0 auto;
-    width: 50%;
-    padding: 20px;
-}
-.textblock4 p, .textblock4_1 p {
-    text-align: center;
-    padding: 100px 0 80px;
-    line-height: 1.5em;
+.textblock.padded {
+    margin-top: 30%;
 }
 
 /* ----------- images -------------*/
-
-
-
+.lovebirds1 {
+    position: relative;
+    z-index: 100;
+}
+.clouds {
+    position: absolute;
+    z-index: 1;
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+}
+.clouds img {
+    display: block;
+    max-width: 60%;
+}
+.clouds img#cloud5 {
+    max-width: 100%;
+}
+#cloud2, #cloud4, #cloud7 {
+    clear: both;
+    float: right;
+}
+#cloud5 {
+    margin: 0 auto;
+    margin-top: 15%;
+}
+#cloud6, #cloud7 {
+    display: inline-block;
+}
+.seagulls {
+    position: absolute;
+    z-index: 10;
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+}
+.seagulls img {
+    display: block;
+    max-width: 30%;
+}
+#seagull1 {
+    margin-left: 50%;
+}
+#seagull2 {
+    margin: 0 auto;
+}
+#seagull3 {
+    margin-left: 35%;
+}
+#seagull4 {
+    margin-left: 25%;
+}
+#seagull5 {
+    margin-left: 75%;
+    margin-top: 10%;
+}
+#seagull6 {
+    margin-left: 25%;
+}
+.yogagirl {
+    position: relative;
+    z-index: 1000;
+    margin: 10% 0;
+}
+#seagull7 {
+    margin-left: 40%;
+}
+#seagull8 {
+    margin-left: 50%;
+}
+#crowd {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+}
+#crowd img {
+    display: block;
+    width: 100%;
+}
 /******************************************************
 
 Section 2 (blue section)
 
  ******************************************************/
-
+#section2 {
+    margin-top: -5%;
+    background: #65B6CC;
+    padding-bottom: 15%;
+}
 /* ----------- text -------------*/
-
+#section2 .textblock {
+    text-align: left;
+    margin-left: 10%;
+    color: #006588;
+    padding-top: 25%;
+}
+#section2 a {
+    color: #fff;
+}
 
 /* ----------- images -------------*/
+.branch {
+    position: absolute;
+    display: block;
+    z-index: 100;
+    width: 100%;
+}
+.sun {
+    position: absolute;
+    display: block;
+    z-index: 1;
+    width: 100%;
+}
+.sun img {
+    width: 45%;
+}
+.branch img {
+    float: right;
+    width: 60%;
+}
+#branch1 {
+    margin-top: -5%;
+}
+#branch2 {
+    /*margin-top: 30%;*/
+}
+#branch3 {
+    /*margin-top: 60%;*/
+}
+.wideclouds {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    margin-top: -5%;
+}
+.wideclouds img {
+    display: block;
+    width: 90%;
+}
+
+#cloud9 {
+    margin: 0 auto;
+}
 
 /******************************************************
 
 Section 3 (white section)
 
  ******************************************************/
-
+#section3 {
+    margin-top: 35%;
+    margin-bottom: 35%;
+}
 /* ----------- text -------------*/
-
-
+#section3 .textblock {
+    color: #006588;
+}
+.cp+.textblock {
+    margin-top: 5%;
+}
+#section3 a {
+    color: #333;
+}
+.party {
+    padding-bottom: 10%;
+}
+.party .textblock {
+    padding-top: 10%;
+}
+.wine+.textblock {
+    margin-top: 30%;
+}
+.gift+.textblock {
+    padding-top: 20%;
+}
 /* ----------- images -------------*/
+.brides {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    margin: 0 auto;
+    display: inline-block;
+    padding: 0;
+}
+.brides img {
+    width: 20%;
+}
+#brideleft {
+    margin-right: -10px;
+}
+#brideright {
+    margin-left: -10px;
+}
+.grass {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: -20%;
+}
+.grass img {
+    width: 60%;
+}
+.cp {
+    position: relative;
+    margin-top: 10%;
+}
+.cp img {
+    width: 55%;
+}
+.buildings {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+#bldgleft {
+    width: 23%;
+    float: left;
+}
+#bldgright {
+    width: 23%;
+    float: right;
+}
+.taxi {
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    margin-top: 10%;
+}
+.taxi img {
+    float: left;
+    width: 40%;
+}
+.wine img {
+    position: absolute;
+    width: 60%;
+    left: 20%;
+    z-index: 1;
+}
+.wine img#glasses {
+    position: absolute;
+    z-index: 100;
+}
+.gift {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    margin: 0 auto;
+}
+.gift img {
+    width: 25%;
+}
 
 /******************************************************
 
@@ -301,53 +499,74 @@ Media Queries
  ******************************************************/
 /*Desktop*/
 @media only screen and (max-width: 1024px) {
-    h1 {
-        font-size: 1.0em;
+    header h1 {
+        font-size: 2.0em;
     }
 }
 /*Mobile*/
-@media only screen and (max-width: 824px) {
+@media only screen and (max-width: 842px) {
+    body {
+        font-size: 1.5em;
+    }
     header {
         width: 90%;
         margin-top: 80px;
     }
+    header h1 {
+        font-size: 1.2em;
+    }
+    .weddingdate {
+        margin-top: -50px;
+        width: 90%;
+    }
+    .weddingdate p {
+        width: 75%;
+        line-height: 1.0em;
+    }
     .sign, .circles {
         display: none;
     }
-    .textblock1, .textblock3, .textblock4, .textblock5 {
-        width: 85%;
-        font-size: 0.7em;
-    }
-    .textblock2 {
-        width: 50%;
-    }
-    .textblock2 p {
-        font-size: 1.5em;
-    }
     p.thedate {
-        font-size: 4.0em;
+        font-size: 3.0em;
+        color: #3AADC9;
+    }
+    .countdown p {
+        font-size: 1.0em;
+    }
+    #cloud7 {
+        display: none;
+    }
+    .branch img {
+        /*display: none;*/
+        width: 70%;
+    }
+    #bldgleft {
+        display: none;
+    }
+    #bldgright {
+        width: 30%;
+    }
+    .taxi {
+        display: none;
     }
     footer p.right {
         float: left;
     }
 }
-
-@media only screen and (min-width: 461px) and (max-width: 824px) {
-    header {
-        width: 50%;
+/* Tablet */
+@media only screen and (min-width: 551px) and (max-width: 842px) {
+    header h1 {
+        font-size: 1.8em;
     }
-    .textblock1, .textblock3, .textblock4 {
+    .weddingdate {
         width: 70%;
     }
-    .textblock1 {
-        font-size: 1em;
+    .weddingdate p {
+        width: 70%;
+        line-height: 1.5em;
     }
-    .textblock4 {
-        /*font-size: .7em;*/
-    }
-    .textblock5 {
-        width: 50%;
-        font-size: .9em;
+    .branch img {
+        display: block;
     }
     footer p.right {
         float: right;
