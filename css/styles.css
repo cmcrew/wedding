@@ -51,13 +51,20 @@ a {
 Header
 
  ******************************************************/
-
 header {
-    position: relative;
+    /*position: fixed;*/
+    /*top: 0;*/
+    /*z-index: 100000;*/
+    /*width: 100%;*/
+    /*background: rgba(255,255,255,0.5);*/
+}
+
+.sign {
+    position: absolute;
     z-index: 2;
     width: 80%;
-    margin: 0 auto;
-    top: -65px;
+    left: 10%;
+    top: 75px;
     
     /*rounded corners*/
     -moz-border-radius: 70px;
@@ -74,7 +81,6 @@ header {
 }
 
 .signgradient-bg {
-    position: relative;
     width: 100%;
     /*rounded corners*/
     -moz-border-radius: 70px;
@@ -108,7 +114,7 @@ header p {
     padding-bottom: 5px;
     margin: 0;
 }
-.sign {
+.signStrings {
     position: relative;
     z-index: 100;
     width: 74%;
@@ -143,11 +149,11 @@ header p {
     position: relative;
     z-index: 10;
     margin: 0 auto;
+    margin-top: 22%;
     margin-bottom: 50px;
     width: 55%;
     background: url(../images/newimages/arrows.png) no-repeat;
     background-size: 100%;
-    /*background-position: 0 25px;*/
 }
 .weddingdate p {
     font-size: 0.8em;
@@ -296,7 +302,7 @@ Section 2 (blue section)
 .branch {
     position: absolute;
     display: block;
-    z-index: 100;
+    z-index: 1000;
     width: 100%;
 }
 .sun {
@@ -444,13 +450,59 @@ Section 3 (white section)
 .gift img {
     width: 25%;
 }
-
+.drink {
+    height: 100px;
+    
+}
 /******************************************************
 
 RSVP Envelope
 
  ******************************************************/
-
+.envelope img {
+    position: absolute;
+    z-index: 1;
+    left: 20%;
+    width: 60%;
+    margin-top: -50%;
+}
+#envfront {
+    z-index: 10000;
+}
+#letter {
+    position: relative;
+    z-index: 100;
+    width: 55%;
+    margin: 0 auto;
+    background: #fff;
+    border: 2px solid #BC9E5C;
+}
+#letter .textblock {
+    border: 2px solid #BC9E5C;
+    padding: 20%;
+    padding-bottom: 10%;
+    margin: 20px;
+    color: #BC9E5C;
+}
+#letter a {
+    color: #006588;
+}
+.decorations {
+    position: absolute;
+    z-index: 10000;
+    width: 100%;
+    margin: 0 auto;
+}
+.decorations img {
+    display: block;
+    margin: 0 auto;
+}
+#heart {
+    margin-top: 2%;
+}
+#birds2 {
+    margin-top: 5%;
+}
 /******************************************************
 
 Footer
@@ -462,7 +514,7 @@ footer {
     font-size: .6em;
     font-weight: 200;
     background: #7ad6e9;
-    margin: 0;
+    margin-top: 10%;
     padding: 70px 0 10px 0;
 }
 footer p {
@@ -509,22 +561,28 @@ Media Queries
         font-size: 1.5em;
     }
     header {
+        top: -5%
+    }
+    .sign {
         width: 90%;
-        margin-top: 80px;
+        left: 5%;
     }
     header h1 {
         font-size: 1.2em;
     }
     .weddingdate {
-        margin-top: -50px;
+        margin-top: 25%;
         width: 90%;
     }
     .weddingdate p {
         width: 75%;
         line-height: 1.0em;
     }
-    .sign, .circles {
+    .signStrings, .circles {
         display: none;
+    }
+    .lovebirds1 img {
+        width: 25%;
     }
     p.thedate {
         font-size: 3.0em;
@@ -552,6 +610,23 @@ Media Queries
     footer p.right {
         float: left;
     }
+    .envelope {
+        display: none;
+    }
+    .yogagirl img {
+        width: 30%;
+    }
+    #letter {
+        width: 80%;
+        font-size: .8em;
+    }
+    #birds2 {
+        display: none;
+    }
+    #letter .textblock {
+        padding: 5%;
+        padding-top: 15%;        
+    }
 }
 /* Tablet */
 @media only screen and (min-width: 551px) and (max-width: 842px) {
@@ -568,6 +643,10 @@ Media Queries
     .branch img {
         display: block;
     }
+    #letter {
+        font-size: 1.0em;
+    }
+
     footer p.right {
         float: right;
     }

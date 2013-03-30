@@ -1,57 +1,91 @@
+/******************************************************
+ Courtney and Kim Wedding RSVP (Google Form)
+ Authors: Courtney Mitchell & Kim Krolewsky
+ ******************************************************/
+
+/******************************************************
+
+General Styling
+
+ ******************************************************/
+
 body {
-  background: #666;
-  color: #2f1703;
-  color: #666;
-  font-family: 'OFL Sorts Mill Goudy TT',Garamond,Georgia,'Times New Roman',serif;
-  margin: 0 20px;
+  background: #fff;
+  font-family: 'Cabin', sans-serif;
+  font-size: 1.0em;
+  font-weight: 200;
+  margin: 0;
   padding: 0;
+  color: #006077;
 }
 h1, h2, h3, h4, h5, h6, p, ul, ol, li, div, td, label {
   line-height: 20px;
   margin: 0;
   padding: 0;
 }
+h1 span {
+  color: #65B6CC;
+  line-height: 1.5em;
+}
+h1 span#and {
+  font-size: .7em;
+}
+.branch {
+  width: 100%;
+}
+.branch img {
+  float: right;
+  width: 52%;
+  right: 0;
+  
+  transform:rotate(7deg);
+  -ms-transform:rotate(7deg); /* IE 9 */
+  -moz-transform:rotate(7deg); /* Firefox */
+  -webkit-transform:rotate(7deg); /* Safari and Chrome */
+  -o-transform:rotate(7deg); /* Opera */
+}
+.branch img#branchleft {
+  position: absolute;
+  left: 0;
+  -moz-transform: scaleX(-1) rotate(7deg);
+  -o-transform: scaleX(-1) rotate(7deg);
+  -webkit-transform: scaleX(-1) rotate(7deg);
+  transform: scaleX(-1) rotate(7deg);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
 ul {
   list-style: none;
 }
-input, select, textarea {
-  font-family: Tahoma,Arial,serif;
-  font-size: 13px;
+.ss-secondary-text {
+  color: #006077;
 }
+
+/******************************************************
+
+Form Elements
+
+ ******************************************************/
 div.ss-form-container {
-  background: #fffefa;
-  border: 1px solid #d4c7b4;
+  /*background: #fffefa;*/
+  border: none;
   font-size: 1.2em;
   line-height: 1.6em;
-  margin: 20px auto;
+  margin: 0 auto;
   max-width: 800px;
-  padding: 20px 40px 20px 20px;
   width: auto;
 }
 div.ss-form-heading {
   text-align: center;
 }
-.ss-required-asterisk {
-  color: #c00;
-}
-h1, h2 {
-  font-family: Tangerine;
-}
 h1.ss-form-title {
+  width: 85%;
   background: url('https://ssl.gstatic.com/docs/forms/themes/images/v0/0AX42CRMsmRFbUy0yMjdiMTQ4Yi0zZjUwLTQ5NTUtOGVmNC05ODNlZTUxYTViYzA/entry-bg.gif') bottom center no-repeat;
-  font-size: 48px;
-  font-weight: normal;
+  font-family: 'Lobster', cursive;
+  font-size: 3.0em;
   line-height: 52px;
-  margin: 0 0 10px;
+  margin: 0 auto;
   padding: 0 0 25px;
-}
-h1 span {
-  display: block;
-  line-height: 1.5em;
-}
-h1 span#and {
-  font-size: .5em;
-  color: #f0f;
 }
 div.errorbox-bad {
   background: none;
@@ -64,13 +98,17 @@ div.errorheader, div.errorbox-bad div.ss-form-entry {
   color: #c00;
   padding: 5px;
 }
+.errorbox-good {
+  margin: 0 auto;
+}
 div.ss-form-entry {
-  margin: 0 0 20px;
+  width: 70%;
+  margin: 0 auto;
 }
 div.ss-section-header div.ss-form-entry, div.ss-navigate div.ss-form-entry {
   background: none;
   padding: 0;
-  margin: 0;
+  width: 100%;
 }
 div.ss-section-header, div.ss-page-break {
   background: url('//ssl.gstatic.com/docs/forms/images/v0/0AX42CRMsmRFbUy0yMjdiMTQ4Yi0zZjUwLTQ5NTUtOGVmNC05ODNlZTUxYTViYzA/entry-bg.gif') bottom center no-repeat;
@@ -80,24 +118,24 @@ div.ss-section-header, div.ss-page-break {
 }
 h2.ss-section-title, h2.ss-page-title {
   background: none;
-  font-size: 36px;
-  font-weight: normal;
+  text-align: center;
+  font-size: 1.5em;
   line-height: 42px;
   margin: 0;
   padding: 0;
 }
 .ss-choice-item {
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
 }
 label.ss-q-help {
   font-style: italic;
   margin: 0;
 }
-.ss-required-asterisk {
-  color: #999;
-}
 input.ss-q-short, textarea.ss-q-long, select, input.ss-q-other, input.ss-q-checkbox {
   border: 1px solid #ddd0cc;
+}
+input.ss-q-short, textarea.ss-q-long {
+    width: 80%;
 }
 label.ss-scalenumber {
   padding: 0;
@@ -110,6 +148,68 @@ tr.ss-grid-row-odd {
 }
 tr.ss-grid-row-even {
   background: none;
+}
+#ss-submit {
+  margin-left: 15%;
+}
+.btn {
+  display: inline-block;
+  *display: inline;
+  padding: 4px 12px;
+  margin-bottom: 0;
+  *margin-left: .3em;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  *background-color: #e6e6e6;
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  border: 1px solid #cccccc;
+  *border: 0;
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-bottom-color: #b3b3b3;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  *zoom: 1;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.btn-large {
+  padding: 11px 19px;
+  font-size: 17.5px;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+/******************************************************
+
+Clearfix
+
+ ******************************************************/
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+.clear {
+    clear: both;
 }
 
 /********************Media Query**************************/
