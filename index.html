@@ -7,12 +7,13 @@
     <meta charset="UTF-8" />
     <meta name="description" content="Courtney and Kim Wedding Website" />
     <meta name="keywords" content="Courtney and Kim, Courtney Mitchell, Kimberly Krolewski, Wedding, NYC Wedding, Central Park Wedding, July 6, 2013, Casa Pomona, DIY Wedding Invitation" />
-    
+    <link href='http://fonts.googleapis.com/css?family=Bevan' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Gentium+Basic:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Cabin|Cabin+Condensed|Lobster' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
     <link rel="stylesheet" type="text/css" href="css/styles.css"/>
     <script src="js/modernizr-2.6.2.min.js"></script>
+    <!--<script src="js/mycountdown.js"></script>-->
 </head>
 <body>
     	
@@ -65,16 +66,15 @@
 		<p><script language="JavaScript">
 		    TargetDate = "07/06/2013 9:00 AM UTC-0500";
 		    BackColor = "rgba(255,255,255,0)";
-		    ForeColor = "#666";
+		    ForeColor = "#65B6CC";
 		    CountActive = true;
 		    CountStepper = -1;
 		    LeadingZero = true;
-		    DisplayFormat = "%%D%% Days. %%H%% Hours. %%M%% Minutes. %%S%% Seconds.";
+		    DisplayFormat = "<div class='dd'>%%D%% <span class='label'>Days</span></div> <div class='hh'>%%H%% <span class='label'>Hours</span></div> <div class='mm'>%%M%% <span class='label'>Mins</span></div> <div class='ss'>%%S%% <span class='label'>Secs</span></div>";
 		    FinishMessage = "It is finally here!";
 		</script>
 	        <script language="JavaScript" src="js/countdown.js"></script></p>
 	    </div>
-	    <!--<div class="clear"></div>-->
 	    <div  class="seagulls">
 		<img id="seagull1" src="images/newimages/seagull1.png" alt=""/>
 		<img id="seagull2" src="images/newimages/seagull2.png" alt=""/>
@@ -166,8 +166,8 @@
 		And expect lots of wows!</p>
 	    </div>
 	    <div  class="brides">
-		<img id="brideleft" src="images/newimages/brideleft.png" alt=""/>
-		<img id="brideright" src="images/newimages/brideright.png" alt=""/>
+		<!--<img id="brideleft" src="images/newimages/brideleft.png" alt=""/>-->
+		<img id="brides" src="images/newimages/brides.png" alt=""/>
 	    </div>
 	    <div class="grass">
 		<img id="grass" src="images/newimages/grass.png" alt="" />
@@ -196,28 +196,32 @@
 		    We'll be pouring the Cava<br/>
 		    At our very <a href="http://www.bing.com/maps/?FORM=Z9LH2#JnE9LjUwJTJid2VzdCUyYjkzcmQlMmJzdHJlZXQlMjUyYyUyYm5ldyUyYnlvcmslMjUyYyUyYm55JTdlc3N0LjAlN2VwZy4xJmJiPTU2LjI3OTA4MDEzNzkxNCU3ZS0zNy4zODk3MjQ3MzElN2UxNS45ODA5Mjg0MDg0NTglN2UtMTE2LjY2NzA2ODQ4MQ==" target="_blank">own Casa!</a></p>
 		</div>
-	    </div>
-	    <div class="wine">
-		<img id="wine" src="images/newimages/winekk.png" alt="" />
-		<div class="whiterect"></div>
-		<img id="glasses" src="images/newimages/wineglasseskk.png" alt="" />
-	    </div>
-	    <div class="textblock">
-		<p>Cocktails and eats<br/>
-		Will be our little treats<br/>
-		<br/>
-		For our family and friends<br/>
-		The fun just extends!</p>
-	    </div>
-	    <div class="gift">
-		<img id="gift" src="images/newimages/gift.png" alt="" />
-	    </div>
-	    <div class="textblock">
-		<p>Registries there are none<br/>
-		Not any, not one.<br/>
-		<br/>
-		Just the gift of your presence<br/>
-		Will bring us great pleasance!</p>
+	    </div><!-- party -->
+	    <div class="cocktails clearfix">
+		<div class="wine">
+		    <img id="wine" src="images/newimages/winekk.png" alt="" />
+		    <div class="whiterect"></div>
+		    <img id="glasses" src="images/newimages/wineglasseskk.png" alt="" />
+		</div>
+		<div class="textblock">
+		    <p>Cocktails and eats<br/>
+		    Will be our little treats<br/>
+		    <br/>
+		    For our family and friends<br/>
+		    The fun just extends!</p>
+		</div>
+	    </div><!--cocktails -->
+	    <div class="present">
+		<div class="textblock">
+		    <p>Registries there are none<br/>
+		    Not any, not one.<br/>
+		    <br/>
+		    Just the gift of your presence<br/>
+		    Will bring us great pleasance!</p>
+		</div>
+		<div class="gift">
+		    <img id="gift" src="images/newimages/gift.png" alt="" />
+		</div>
 	    </div>
         </section>
 	<section id="invitation">

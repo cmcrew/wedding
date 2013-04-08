@@ -54,7 +54,7 @@ if (typeof(ForeColor)=="undefined")
 if (typeof(TargetDate)=="undefined")
   TargetDate = "12/31/2020 5:00 AM";
 if (typeof(DisplayFormat)=="undefined")
-  DisplayFormat = "%%D%% Days, %%H%% Hours, %%M%% Minutes, %%S%% Seconds.";
+  DisplayFormat = "%%D%% <span class='label'>Days</span>, %%H%% <span class='label'>Hours</span>, %%M%% <span class='label'>Minutes</span>, %%S%% <span class='label'>Seconds</span>";
 if (typeof(CountActive)=="undefined")
   CountActive = true;
 if (typeof(FinishMessage)=="undefined")

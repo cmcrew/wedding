@@ -179,12 +179,12 @@ Section 1 (white section)
 p.thedate {
     position: relative;
     z-index: 1000;
-    font-family: helvetica, arial, sans-serif;
-    font-weight: 800;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
     font-size: 6.0em;
     text-transform: uppercase;
     margin: 20px 0;
-    color: #65B6CC;
+    color: #4B4F4E;
 }
 .countdown {
     position: relative;
@@ -192,10 +192,22 @@ p.thedate {
     text-align: center;
 }
 .countdown p {
-    font-size: 1.8em;
+    color: #65B6CC;
+    font-family: 'Bevan', cursive;
+    font-size: 3.8em;
 }
-.textblock.padded {
-    margin-top: 30%;
+.countdown .dd, .countdown .hh, .countdown .mm, .countdown .ss {
+    display:inline-block;
+    width: 15%;
+    line-height: 0.6em;
+}
+.countdown span.label {
+    font-family: 'cabin-condensed', sans-serif;
+    display: block;
+    font-size: .25em;
+    font-weight: 200;
+    text-transform: uppercase;
+    color: #006077;
 }
 
 /* ----------- images -------------*/
@@ -204,9 +216,8 @@ p.thedate {
     z-index: 100;
 }
 .clouds {
-    position: absolute;
+    position: relative;
     z-index: 1;
-    margin: 0 auto;
     width: 100%;
 }
 .clouds img {
@@ -228,7 +239,7 @@ p.thedate {
 }
 #cloud3 {
     position: absolute;
-    top: 260px;
+    top: -100px;
 }
 #cloud4 {
     position: absolute;
@@ -253,11 +264,10 @@ p.thedate {
     right: 100px;
 }
 .seagulls {
-    position: absolute;
-    z-index: 10;
+    position: relative;
+    z-index: 1001;
     margin: 0 auto;
     width: 100%;
-    overflow: hidden;
 }
 .seagulls img {
     display: block;
@@ -273,16 +283,19 @@ p.thedate {
     left: 50%;
 }
 #seagull3 {
+    position: absolute;
     margin-left: 35%;
 }
 #seagull4 {
+    position: absolute;
     margin-left: 25%;
 }
 #seagull5 {
-    margin-left: 75%;
-    margin-top: 10%;
+    position: absolute;
+    margin-left: 70%;
 }
 #seagull6 {
+    position: absolute;
     margin-left: 25%;
 }
 .yogagirl {
@@ -302,15 +315,14 @@ p.thedate {
     display: block;
 }
 #yogagirl2, #yogagirl3, #yogagirl4 {
-    display: block;
-    -moz-opacity: 0;
-    -webkit-opacity: 0;
-    opacity: 0;
+    display: none;
 }
 #seagull7 {
+    position: absolute;
     margin-left: 40%;
 }
 #seagull8 {
+    position: absolute;
     margin-left: 50%;
 }
 #crowd {
@@ -351,7 +363,7 @@ Section 2 (blue section)
     width: 100%;
 }
 .sun {
-    position: absolute;
+    position: relative;
     display: block;
     z-index: 1;
     width: 100%;
@@ -396,8 +408,14 @@ Section 3 (white section)
 
  ******************************************************/
 #section3 {
-    margin-top: 35%;
-    margin-bottom: 35%;
+    position: relative;
+    margin-top: 25%;
+    margin-bottom: 55%;
+}
+.present {
+    position: relative;
+    min-height: 600px;
+    /*margin-top: 25%;*/
 }
 /* ----------- text -------------*/
 #section3 .textblock {
@@ -410,16 +428,19 @@ Section 3 (white section)
     color: #006588;
 }
 .party {
-    padding-bottom: 10%;
+    position: relative;
 }
 .party .textblock {
     padding-top: 10%;
 }
-.wine+.textblock {
-    margin-top: 30%;
+.cocktails {
+    position: relative;
 }
-.gift+.textblock {
-    padding-top: 20%;
+.wine+.textblock {
+    margin-top: 60%;
+}
+.present .textblock {
+    padding-top: 30%;
 }
 /* ----------- images -------------*/
 .brides {
@@ -431,13 +452,7 @@ Section 3 (white section)
     padding: 0;
 }
 .brides img {
-    width: 20%;
-}
-#brideleft {
-    /*margin-left: 10px;*/
-}
-#brideright {
-    /*margin-left: -10px;*/
+    width: 35%;
 }
 .grass {
     position: absolute;
@@ -461,13 +476,8 @@ Section 3 (white section)
     z-index: 1;
     width: 100%;
 }
-#bldgleft {
-    width: 23%;
-    float: left;
-}
-#bldgright {
-    width: 23%;
-    float: right;
+#apartment {
+    width: 50%;
 }
 .taxi {
     position: absolute;
@@ -493,6 +503,7 @@ Section 3 (white section)
     width: 60%;
     left: 20%;
     z-index: 1;
+    margin-top: -40%;
 }
 .wine img#glasses {
     position: absolute;
@@ -503,47 +514,54 @@ Section 3 (white section)
     width: 100%;
     z-index: 10;
     height: 0;
-    margin-top: 10%;
+    margin-top: -30%;
     background: #fff;
     
-    -moz-transition: height 8s ease-in 0;
-    -ms-transition: height 8s ease-in 0;
-    -webkit-transition: height 8s ease-in 0;
-    -transition: height 8s ease-in 0;
+    -moz-transition: height 6s ease-in 0;
+    -ms-transition: height 6s ease-in 0;
+    -webkit-transition: height 6s ease-in 0;
+    -transition: height 6s ease-in 0;
 }
 .gift {
     position: absolute;
     z-index: 1;
+    top: 10%;
+    margin-top: 10%;
     width: 100%;
-    margin: 0 auto;
 }
 .gift img {
     width: 25%;
 }
 .drink {
-    height: 350px;  
+    height: 90%;  
 }
 /******************************************************
 
 RSVP Envelope
 
  ******************************************************/
+section#invitation {
+    position: relative;
+    /*margin-top: 70%;*/
+}
+
 .envelope img {
     position: absolute;
     z-index: 1;
-    left: 20%;
-    width: 60%;
-    margin-top: -52%;
+    left: 25%;
+    width: 50%;
+    bottom: 0;
 }
 #envfront {
     z-index: 10000;
-    margin-top: -25%;
 }
 #letter {
-    position: relative;
+    position: absolute;
     z-index: 100;
-    width: 55%;
-    margin: 0 auto;
+    width: 45%;
+    left: 50%;
+    margin-left: -22.5%;
+    bottom: 0;
     background: #fff;
     border: 2px solid #BC9E5C;
 }
@@ -553,17 +571,17 @@ RSVP Envelope
     padding-bottom: 10%;
     margin: 20px;
     color: #736497;
-    
-    -moz-transition: all 2s ease-in 0;
-    -ms-transition: all 2s ease-in 0;
-    -webkit-transition: all 2s ease-in 0;
-    -transition: all 2s ease-in 0;
+    font-size: 0.8em;
+    -moz-transition: all 1s ease-in 1500ms;
+    -ms-transition: all 1s ease-in 1500ms;
+    -webkit-transition: all 1s ease-in 1500ms;
+    -transition: all 1s ease-in 1500ms;
 }
 #letter a {
     color: #BC9E5C;
 }
 .grow {
-    padding-bottom: 20% !important;
+    padding-bottom: 40% !important; 
 }
 .decorations {
     position: absolute;
@@ -591,7 +609,6 @@ footer {
     color: #4B4F4E;
     font-size: .5em;
     font-weight: 200;
-    margin-top: 10%;
     padding: 70px 0 20px 0;
 }
 footer p {
@@ -647,7 +664,7 @@ Media Queries
         font-size: 1.2em;
     }
     .weddingdate {
-        margin-top: 25%;
+        margin-top: 38%;
         width: 90%;
     }
     .weddingdate p {
@@ -667,18 +684,11 @@ Media Queries
     .countdown p {
         font-size: 1.0em;
     }
-    #cloud7 {
+    #cloud6, #cloud7 {
         display: none;
     }
     .branch img {
-        /*display: none;*/
         width: 70%;
-    }
-    #bldgleft {
-        display: none;
-    }
-    #bldgright {
-        width: 30%;
     }
     .taxi {
         display: none;
@@ -686,8 +696,12 @@ Media Queries
     footer p.right {
         float: left;
     }
-    .envelope {
-        display: none;
+    .envelope img {
+        width: 90%;
+        left: 5%;
+    }
+    .yogagirl {
+        min-height: 100px;
     }
     .yogagirl img {
         width: 30%;
@@ -695,13 +709,25 @@ Media Queries
     #letter {
         width: 80%;
         font-size: .8em;
+        left: 10%;
+        margin-left: 0;
     }
     #birds2 {
         display: none;
     }
     #letter .textblock {
         padding: 5%;
-        padding-top: 15%;        
+        padding-top: 15%;
+
+    }
+    #apartment {
+        width: 80%;
+    }
+    .gift {
+        top: 0 !important;
+    }
+    .gift img {
+        width: 50%;
     }
 }
 /* Tablet */
@@ -727,4 +753,25 @@ Media Queries
         float: right;
     }
 
+}
+
+/* Thank you Page */
+
+header#thanks {
+    width: 50%;
+    height: 400px;
+    margin: 0 auto;
+    /*background: url(../images/newimages/green-twig-frame.png) no-repeat;*/
+    background-size: 100% 100%;
+    background-origin: content-box;
+}
+#thanks h1 {
+    /*padding-top: 20px;    */
+    font-size: 1.8em;
+    line-height: 2.5em;
+    color: #736497;
+}
+#banner {
+    width: 70%;
+    padding-top: 20px;
 }
