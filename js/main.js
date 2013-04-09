@@ -16,20 +16,31 @@ $(document).ready(function() {
       var wine = $('#wine');
       var taxi = $('#taxi');
       var letter = $('#letter .textblock');
+      var rect = $('.whiterect');
       
       parallaxScroll(scrolled);
       
       if(!runOnce && isScrolledIntoView(scrolled,yogagirl1)) {
          fadeImages(yogagirl1, yogagirl2,yogagirl3,yogagirl4);
+      } else {
+         //resets yogagirl to initial position, but animation does not run again...
+         yogagirl4.fadeOut();
+         yogagirl1.fadeIn();
       }
       if(isScrolledIntoView(scrolled,wine)) {
-         drinkWine();
+         rect.addClass('drink');
+      } else {
+         rect.removeClass('drink');
       }
       if(isScrolledIntoView(scrolled,taxi)) {
-         driveTaxi(taxi);
+         taxi.addClass('drive');
+      } else {
+         taxi.removeClass('drive');
       }
       if(isScrolledIntoView(scrolled,letter)) {
          letter.addClass('grow');
+      } else {
+         letter.removeClass('grow');
       }
    });
    
@@ -41,13 +52,13 @@ $(document).ready(function() {
       return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom));
    }
    
-   function fadeImages(elem1, elem2,elem3,elem4) {
+   function fadeImages(elem1,elem2,elem3,elem4) {
       runOnce = true;
       var first = elem1;
       var second = elem2;
       var third = elem3;
-      var last = elem4;
-      first.delay(1500).fadeOut('slow', function(e) {
+      var last = elem4;                  
+      first.delay(1000).fadeOut('slow', function(e) {
          second.fadeIn('slow', function() {
             $(this).delay(400).fadeOut('slow');
           });
@@ -58,6 +69,7 @@ $(document).ready(function() {
       });    
    }
    
+   //unused function - didn't give the effect I wanted with the yoga animation - went with code above (still not perfect)
    function nextFrame(elem) {
       console.log("run once " + runOnce);
       runOnce = true;
@@ -68,15 +80,6 @@ $(document).ready(function() {
          elem = next;
          nextFrame(elem);
       });
-   }
-   
-   function drinkWine() {
-      var rect = $('.whiterect');
-      rect.addClass('drink');
-   }
-   
-   function driveTaxi(elem) {    
-      elem.addClass('drive');
    }
    
    function parallaxScroll(var1){
@@ -96,7 +99,6 @@ $(document).ready(function() {
       $('#seagull6').css('top',(0-(scrolled*.65))+'px');
       $('#seagull7').css('top',(0+(scrolled*.06))+'px');
       $('#seagull8').css('top',(200-(scrolled*.05))+'px');
-      //$('.present .textblock').css('top',(0-(scrolled*.25))+'px');
-      $('.gift').css('top',(giftTop-(scrolled*.7))+'px');
+      $('.gift').css('top',(6000-(scrolled*.7))+'px');
   }
 });

@@ -542,7 +542,6 @@ RSVP Envelope
  ******************************************************/
 section#invitation {
     position: relative;
-    /*margin-top: 70%;*/
 }
 
 .envelope img {
@@ -567,21 +566,21 @@ section#invitation {
 }
 #letter .textblock {
     border: 2px solid #BC9E5C;
-    padding: 20%;
+    padding: 20% 10%;
     padding-bottom: 10%;
     margin: 20px;
     color: #736497;
     font-size: 0.8em;
-    -moz-transition: all 1s ease-in 1500ms;
-    -ms-transition: all 1s ease-in 1500ms;
-    -webkit-transition: all 1s ease-in 1500ms;
-    -transition: all 1s ease-in 1500ms;
+    -moz-transition: all 600ms ease-in 1000ms;
+    -ms-transition: all 600ms ease-in 1000ms;
+    -webkit-transition: all 600ms ease-in 1000ms;
+    -transition: all 600ms ease-in 1000ms;
 }
 #letter a {
     color: #BC9E5C;
 }
 .grow {
-    padding-bottom: 40% !important; 
+    padding-bottom: 50% !important; 
 }
 .decorations {
     position: absolute;
@@ -635,6 +634,21 @@ Clearfix
 }
 .clear {
     clear: both;
+}
+/******************************************************
+
+Thank You Page
+
+ ******************************************************/
+
+#thanks h1 {
+    font-size: 1.8em;
+    line-height: 2.5em;
+    color: #736497;
+}
+#banner {
+    width: 70%;
+    padding-top: 20px;
 }
 
 /******************************************************
@@ -718,7 +732,6 @@ Media Queries
     #letter .textblock {
         padding: 5%;
         padding-top: 15%;
-
     }
     #apartment {
         width: 80%;
@@ -728,6 +741,16 @@ Media Queries
     }
     .gift img {
         width: 50%;
+    }
+    
+    #thanks h1 {
+        font-size: 1.5em;
+        line-height: 1.5em;
+        color: #736497;
+    }
+    #banner {
+        width: 90%;
+        padding-top: 20px;
     }
 }
 /* Tablet */
@@ -755,23 +778,3 @@ Media Queries
 
 }
 
-/* Thank you Page */
-
-header#thanks {
-    width: 50%;
-    height: 400px;
-    margin: 0 auto;
-    /*background: url(../images/newimages/green-twig-frame.png) no-repeat;*/
-    background-size: 100% 100%;
-    background-origin: content-box;
-}
-#thanks h1 {
-    /*padding-top: 20px;    */
-    font-size: 1.8em;
-    line-height: 2.5em;
-    color: #736497;
-}
-#banner {
-    width: 70%;
-    padding-top: 20px;
-}
