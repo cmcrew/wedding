@@ -25,7 +25,7 @@ $(document).ready(function() {
       } else {
          //resets yogagirl to initial position, but animation does not run again...
          yogagirl4.fadeOut();
-         yogagirl1.fadeIn();
+         yogagirl1.delay(1000).fadeIn();
       }
       if(isScrolledIntoView(scrolled,wine)) {
          rect.addClass('drink');
