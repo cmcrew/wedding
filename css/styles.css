@@ -44,7 +44,7 @@ p {
 }
 a {
     text-decoration: none;
-    cursor: auto;
+    cursor: pointer;
 }
 
 /******************************************************
@@ -260,7 +260,6 @@ p.thedate {
 }
 #cloud7 {
     position: absolute;
-    /*top: 700px;*/
     right: 100px;
 }
 .seagulls {
@@ -301,7 +300,7 @@ p.thedate {
 .yogagirl {
     position: relative;
     z-index: 1000;
-    margin: 10% 0;
+    margin: 5% 0;
     min-height: 187px;
 }
 .yogagirl img {
@@ -340,9 +339,24 @@ Section 2 (blue section)
 
  ******************************************************/
 #section2 {
-    margin-top: -5%;
+    padding-bottom: 15%;    
+    /* fallback background */
     background: #65B6CC;
-    padding-bottom: 15%;
+ 
+    /* Safari 4-5, Chrome 1-9 */
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E6F4F7), to(#65B6CC));
+    
+    /* Safari 5.1, Chrome 10+ */
+    background: -webkit-linear-gradient(top, #65B6CC, #E6F4F7);
+    
+    /* Firefox 3.6+ */
+    background: -moz-linear-gradient(top, #65B6CC, #E6F4F7);
+    
+    /* IE 10 */
+    background: -ms-linear-gradient(top, #65B6CC, #E6F4F7);
+    
+    /* Opera 11.10+ */
+    background: -o-linear-gradient(top, #65B6CC, #E6F4F7);
 }
 /* ----------- text -------------*/
 #section2 .textblock {
@@ -351,8 +365,9 @@ Section 2 (blue section)
     color: #006588;
     padding-top: 25%;
 }
+
 #section2 a {
-    color: #fff;
+    color: #D05792;
 }
 
 /* ----------- images -------------*/
@@ -364,6 +379,7 @@ Section 2 (blue section)
 }
 .sun {
     position: relative;
+    /*top: -100px;*/
     display: block;
     z-index: 1;
     width: 100%;
@@ -408,39 +424,35 @@ Section 3 (white section)
 
  ******************************************************/
 #section3 {
-    position: relative;
     margin-top: 25%;
-    margin-bottom: 55%;
+    padding-bottom: 15%;
 }
 .present {
     position: relative;
-    min-height: 600px;
-    /*margin-top: 25%;*/
+    padding: 5% 0;
 }
 /* ----------- text -------------*/
 #section3 .textblock {
     color: #4B4F4E;
 }
-.cp+.textblock {
-    margin-top: 5%;
+.grass+.textblock {
+    margin-top: 10%;
 }
 #section3 a {
-    color: #006588;
+    color: #D05792;
 }
-.party {
+.wine {
     position: relative;
-}
-.party .textblock {
-    padding-top: 10%;
+    min-height: 198px;
 }
 .cocktails {
     position: relative;
 }
 .wine+.textblock {
-    margin-top: 60%;
+    padding-top: 10%;
 }
 .present .textblock {
-    padding-top: 30%;
+    padding-top: 4%;
 }
 /* ----------- images -------------*/
 .brides {
@@ -471,12 +483,14 @@ Section 3 (white section)
 .cp img {
     width: 55%;
 }
-.buildings {
+.cafe {
     position: relative;
     z-index: 1;
-    width: 100%;
+    margin: 0 auto;
+    width: 50%;
+    margin-bottom: 5%;
 }
-#apartment {
+#storico {
     width: 50%;
 }
 .taxi {
@@ -489,7 +503,7 @@ Section 3 (white section)
 #taxi {
     float: left;
     width: 40%;
-    
+    -moz-transition-duration: 5s;
     -moz-transition: all 5s ease-in 0;
     -ms-transition: all 5s ease-in 0;
     -webkit-transition: all 5s ease-in 0;
@@ -503,7 +517,6 @@ Section 3 (white section)
     width: 60%;
     left: 20%;
     z-index: 1;
-    margin-top: -40%;
 }
 .wine img#glasses {
     position: absolute;
@@ -511,23 +524,26 @@ Section 3 (white section)
 }
 .whiterect {
     position: absolute;
+    margin-top: 10%;
     width: 100%;
     z-index: 10;
     height: 0;
-    margin-top: -30%;
     background: #fff;
     
+    -moz-transition-duration: 6s;
     -moz-transition: height 6s ease-in 0;
     -ms-transition: height 6s ease-in 0;
     -webkit-transition: height 6s ease-in 0;
-    -transition: height 6s ease-in 0;
+    transition: height 6s ease-in 0;
 }
 .gift {
-    position: absolute;
+    position: relative;
+    min-height: 287px;
     z-index: 1;
-    top: 10%;
-    margin-top: 10%;
     width: 100%;
+    margin: 0 auto;
+    display: inline-block;
+    padding: 0;
 }
 .gift img {
     width: 25%;
@@ -542,6 +558,8 @@ RSVP Envelope
  ******************************************************/
 section#invitation {
     position: relative;
+    min-height: 405px;
+    max-height: 620px;
 }
 
 .envelope img {
@@ -651,6 +669,13 @@ Thank You Page
     padding-top: 20px;
 }
 
+#thanks a {
+    font-size: 0.8em;
+    color: #BC9E5C;
+}
+    #thanks a:visited {
+        color: #BC9E5C;
+    }
 /******************************************************
 
 Media Queries
@@ -733,7 +758,7 @@ Media Queries
         padding: 5%;
         padding-top: 15%;
     }
-    #apartment {
+    #storico {
         width: 80%;
     }
     .gift {
@@ -751,6 +776,9 @@ Media Queries
     #banner {
         width: 90%;
         padding-top: 20px;
+    }
+    .sun {
+        top: 10px !important;
     }
 }
 /* Tablet */

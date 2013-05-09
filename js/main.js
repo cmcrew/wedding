@@ -5,8 +5,8 @@ $(document).ready(function() {
    var runOnce = false;
    var giftTop = $('.gift').offset().top;
    
-   $(window).scroll(function(){ 
-         
+   $(window).scroll(function(){
+             
       var scrolled = $(window).scrollTop(); //position of scroll bar
       var totalHeight = $('body').height(); //total height
       var yogagirl1 = $('#yogagirl1');
@@ -14,34 +14,28 @@ $(document).ready(function() {
       var yogagirl3 = $('#yogagirl3');
       var yogagirl4 = $('#yogagirl4');
       var wine = $('#wine');
-      var taxi = $('#taxi');
       var letter = $('#letter .textblock');
       var rect = $('.whiterect');
       
       parallaxScroll(scrolled);
       
       if(!runOnce && isScrolledIntoView(scrolled,yogagirl1)) {
+         console.log('yogagirl');
          fadeImages(yogagirl1, yogagirl2,yogagirl3,yogagirl4);
-      } else {
-         //resets yogagirl to initial position, but animation does not run again...
-         yogagirl4.fadeOut();
-         yogagirl1.delay(1000).fadeIn();
-      }
+      } 
       if(isScrolledIntoView(scrolled,wine)) {
          rect.addClass('drink');
-      } else {
+      }
+      else {
          rect.removeClass('drink');
       }
-      if(isScrolledIntoView(scrolled,taxi)) {
-         taxi.addClass('drive');
-      } else {
-         taxi.removeClass('drive');
-      }
+      
       if(isScrolledIntoView(scrolled,letter)) {
          letter.addClass('grow');
       } else {
          letter.removeClass('grow');
       }
+      
    });
    
    function isScrolledIntoView(pos,elem) {
@@ -69,19 +63,6 @@ $(document).ready(function() {
       });    
    }
    
-   //unused function - didn't give the effect I wanted with the yoga animation - went with code above (still not perfect)
-   function nextFrame(elem) {
-      console.log("run once " + runOnce);
-      runOnce = true;
-      var next = elem.next();
-      if(!next.length) return;
-      elem.fadeTo(1000,0,function(e) {
-         next.fadeIn('fast');
-         elem = next;
-         nextFrame(elem);
-      });
-   }
-   
    function parallaxScroll(var1){
       var scrolled = var1;
       $('#cloud1').css('top',(0+(scrolled*.25))+'px');
@@ -90,7 +71,7 @@ $(document).ready(function() {
       $('#cloud4').css('top',(200-(scrolled*.35))+'px');
       $('#cloud6').css('top',(700-(scrolled*.25))+'px');
       $('#cloud7').css('top',(1200-(scrolled*.5))+'px');
-      $('.sun').css('top',(-300+(scrolled*.125))+'px');
+      $('.sun').css('top',(-1200+(scrolled*.25))+'px');
       $('#seagull1').css('top',(200-(scrolled*.15))+'px');
       $('#seagull2').css('top',(100-(scrolled*.25))+'px');
       $('#seagull3').css('top',(100-(scrolled*1.1))+'px');
@@ -99,6 +80,6 @@ $(document).ready(function() {
       $('#seagull6').css('top',(0-(scrolled*.65))+'px');
       $('#seagull7').css('top',(0+(scrolled*.06))+'px');
       $('#seagull8').css('top',(200-(scrolled*.05))+'px');
-      $('.gift').css('top',(6000-(scrolled*.7))+'px');
+      //$('.gift').css('top',(6000-(scrolled*.7))+'px');
   }
 });
