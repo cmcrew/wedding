@@ -46,11 +46,12 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li, div, td, label {
   padding: 0;
 }
 h1 span {
-  color: #736497;
+  color: #382B4A;
   line-height: 1.5em;
 }
 h1 span#and {
   font-size: .7em;
+  color: #BB9D5A;
 }
 .branch {
   width: 100%;
@@ -149,6 +150,10 @@ h2.ss-section-title, h2.ss-page-title {
   line-height: 42px;
   margin: 0;
   padding: 0;
+  color: #382B4A;
+}
+.ss-q-title {
+  color: #382B4A;
 }
 .ss-choice-item {
   /*text-transform: uppercase;*/
